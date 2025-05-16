@@ -37,10 +37,10 @@
   <a href="https://www.tiktok.com/@hanah.maee" target="_blank">
     <img src="https://img.shields.io/static/v1?message=TikTok&logo=tiktok&label=&color=000000&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="TikTok" />
   </a>
-  <a href="https://instagram.com/hanahmaee" target="_blank">
+  <a href="https://instagram.com/hanah.maee" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="Instagram" />
   </a>
-  <a href="mailto:yourmail@gmail.com">
+  <a href="mailto:hanahmaeespineda@gmail.com">
     <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="Gmail" />
   </a>
   <a href="https://www.linkedin.com/in/hanah-mae-espineda-053031339/" target="_blank">
