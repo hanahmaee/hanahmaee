@@ -1,14 +1,16 @@
 "use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { HiOutlineMenu } from "react-icons/hi";
 import { RiCloseFill } from "react-icons/ri";
 import { ModeToggle } from "@/custom/dark_toggle";
 import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Contact", href: "#contact" },
@@ -16,12 +18,44 @@ const navLinks = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
+  // Close mobile menu on click outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      const target = event.target as HTMLElement;
+      if (!target.closest("header") && isOpen) {
+        setIsOpen(false);
+      }
+    }
+    if (isOpen) {
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isOpen]);
+
+  // Smooth scroll helper function
+  function scrollToSection(id: string) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-white dark:bg-background shadow-sm">
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3 md:py-4">
-        {/* Logo */}
-        <Link href="/" className="text-2xl font-bold flex items-center space-x-2">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-background shadow-sm">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4 md:py-4">
+        {/* Logo + Site Name */}
+        <Link href="/" className="flex items-center space-x-2" tabIndex={0}>
           <Image
             src="/logo.png"
             alt="Logo"
@@ -29,25 +63,47 @@ export default function Header() {
             height={40}
             className="rounded-sm"
           />
+          <span className="font-bold text-lg text-foreground dark:text-white">
+            Hanahmaee
+          </span>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-8 items-center">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="relative font-medium text-foreground hover:text-primary transition-all after:absolute after:content-[''] after:w-full after:h-[2px] after:bg-primary after:left-0 after:-bottom-1 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left"
-            >
-              {link.label}
-            </Link>
-          ))}
+        <nav
+          className="hidden md:flex space-x-8 items-center text-sm font-medium"
+          aria-label="Primary Navigation"
+        >
+          {navLinks.map((link) => {
+            const id = link.href.substring(1); // Remove '#' for id
+            return (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(id);
+                  setIsOpen(false);
+                }}
+                className="relative text-foreground dark:text-white hover:text-yellow-500 transition-all
+                after:absolute after:content-[''] after:w-full after:h-[2px] after:bg-yellow-500 after:left-0 after:-bottom-1 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left"
+                tabIndex={0}
+              >
+                {link.label}
+              </a>
+            );
+          })}
           <ModeToggle />
         </nav>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
+          <Button
+            variant="ghost"
+            size="icon"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isOpen}
+            onClick={() => setIsOpen(!isOpen)}
+          >
             {isOpen ? <RiCloseFill size={30} /> : <HiOutlineMenu size={30} />}
           </Button>
         </div>
@@ -55,21 +111,32 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-background px-4 pb-4 space-y-2">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="block py-2 text-md font-medium text-foreground hover:text-primary transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
+        <nav
+          className="md:hidden bg-white dark:bg-background px-6 pb-4 space-y-2 text-sm font-medium"
+          aria-label="Mobile Navigation"
+        >
+          {navLinks.map((link) => {
+            const id = link.href.substring(1);
+            return (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(id);
+                  setIsOpen(false);
+                }}
+                className="block py-2 text-foreground dark:text-white hover:text-yellow-500 transition-colors"
+                tabIndex={0}
+              >
+                {link.label}
+              </a>
+            );
+          })}
           <div className="pt-2">
             <ModeToggle />
           </div>
-        </div>
+        </nav>
       )}
     </header>
   );
