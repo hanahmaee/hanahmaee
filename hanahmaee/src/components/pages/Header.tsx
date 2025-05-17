@@ -72,7 +72,7 @@ function scrollToSection(id: string) {
 
         {/* Desktop Nav */}
         <nav
-          className="hidden md:flex space-x-8 items-center text-sm font-medium"
+          className="hidden md:flex space-x-8 items-center text-based font-medium"
           aria-label="Primary Navigation"
         >
           {navLinks.map((link) => {

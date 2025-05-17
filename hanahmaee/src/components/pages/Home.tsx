@@ -9,7 +9,11 @@ import {
   FaLinkedinIn,
   FaInstagram,
   FaGithub,
+  FaPalette,
+  FaFileSignature,
+  FaLaptopCode,
 } from "react-icons/fa";
+import type { IconType } from "react-icons"; // ✅ For icon typing
 
 const roles = [
   "a Writer",
@@ -64,7 +68,7 @@ export default function HomeSection() {
   }, []);
 
   return (
-    <main className="w-full bg-white dark:bg-background px-4 pt-18 pb-12 max-w-7xl mx-auto">
+    <main className="w-full bg-white dark:bg-background px-4 pt-16 pb-12 max-w-7xl mx-auto">
       {/* HOME INTRO */}
       <section
         id="home"
@@ -190,37 +194,41 @@ export default function HomeSection() {
         </motion.div>
       </section>
 
-    {/* SKILL CARDS */}
-    <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-16 pt-4 gap-6 mb-4 px-4 ">
-      {[
-        {
-          title: "Front-End Development",
-          desc: "HTML, CSS, JavaScript, React, Tailwind CSS, Next.js",
-        },
-        {
-          title: "Project Management", 
-          desc: "Agile methodology, team coordination, PMP certified",
-        },
-        {
-          title: "UI/UX Design",
-          desc: "Figma, Adobe XD, user-centered design principles",
-        },
-      ].map((card, idx) => (
-        <motion.div
-          key={idx}
-          className=" bg-card border border-muted shadow-xl rounded-lg p-6 text-center
-          transition-shadow duration-100 hover:shadow-[0_0_25px_5px_rgba(250,204,21,0.7)]"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: idx * 0.2 }}
-        >
-          <h3 className="text-xl font-semibold mb-2 text-foreground">
-            {card.title}
-          </h3>
-          <p className="text-muted-foreground text-sm">{card.desc}</p>
-        </motion.div>
-      ))}
+{/* SKILL CARDS */}
+<section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 mb-4 px-4">
+  {[
+    {
+      title: "UI/UX Design",
+      desc: "Designing intuitive, accessible, and beautiful user interfaces with tools like Figma and Adobe XD.",
+      icon: FaPalette,
+    },
+    {
+      title: "Project Management",
+      desc: "Leading teams, managing timelines, and delivering on goals using Agile, Scrum, and Kanban practices.",
+      icon: FaFileSignature,
+    },
+    {
+      title: "Web Development",
+      desc: "Building responsive, performant, and scalable web apps with modern tech stacks (React, Node, etc).",
+      icon: FaLaptopCode,
+    },
+  ].map((card, idx) => {
+    const Icon = card.icon;
+    return (
+      <motion.div
+        key={idx}
+        className="border-gray-200 shadow-xl rounded-lg p-6 text-center transition-shadow duration-100 hover:shadow-[0_0_25px_5px_rgba(250,204,21,0.7)]"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: idx * 0.2 }}
+      >
+        <Icon className="text-yellow-400 w-12 h-12 mx-auto mb-4" />
+        <h3 className="text-2xl font-semibold mb-2">{card.title}</h3>
+        <p className="text-gray-400 text-base">{card.desc}</p>
+      </motion.div>
+    );
+  })}
 </section>
 
  {/* ABOUT SECTION */}
@@ -320,44 +328,81 @@ export default function HomeSection() {
             </div>
           </section>
 
-      {/* PORTFOLIO */}
-      <section
-        id="portfolio"
-        className="min-h-screen flex flex-col justify-center px-4"
+{/* PORTFOLIO */}
+<section
+  id="portfolio"
+  className="min-h-screen flex flex-col justify-center px-4"
+>
+  <h2 className="text-4xl font-bold text-center mb-10 text-foreground">
+    Portfolio
+  </h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4">
+    {[
+      {
+        id: 1,
+        title: "???",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        image: "/1.JPG",
+      },
+      {
+        id: 2,
+        title: "???",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        image: "/2.JPG",
+      },
+      {
+        id: 3,
+        title: "Si Daks at Juts",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        image: "/3.JPG",
+      },
+      {
+        id: 4,
+        title: "???",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        image: "/potatoArtboard 4.jpg",
+      },
+      {
+        id: 5,
+        title: "???",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        image: "/potatoArtboard 3.jpg",
+      },
+      {
+        id: 6,
+        title: "???",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        image: "/potatoArtboard 2.jpg",
+      },
+    ].map((project) => (
+      <motion.div
+        key={project.id}
+        className="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-shadow"
+        whileHover={{ scale: 1.05 }}
       >
-        <h2 className="text-4xl font-bold text-center mb-10 text-foreground">
-          Portfolio
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4">
-          {[1, 2, 3, 4, 5, 6].map((project) => (
-            <motion.div
-              key={project}
-              className="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-shadow"
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="relative h-48 w-full">
-                <Image
-                  src={`/projects/project-${project}.jpg`}
-                  alt={`Project ${project}`}
-                  fill
-                  className="object-cover"
-                  placeholder="blur"
-                  blurDataURL="/placeholder.png"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-lg text-foreground">
-                  Project Title {project}
-                </h3>
-                <p className="text-muted-foreground text-sm mt-1">
-                  A brief description of project {project} highlighting key
-                  features and technologies used.
-                </p>
-              </div>
-            </motion.div>
-          ))}
+        <div className="relative h-48 w-full">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover"
+            placeholder="blur"
+            blurDataURL="/placeholder.png"
+          />
         </div>
-      </section>
+        <div className="p-4">
+          <h3 className="font-semibold text-lg text-foreground">
+            {project.title}
+          </h3>
+          <p className="text-muted-foreground text-sm mt-1">
+            {project.desc}
+          </p>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
 
       {/* CONTACT */}
       <section
