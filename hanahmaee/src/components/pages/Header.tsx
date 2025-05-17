@@ -44,12 +44,14 @@ export default function Header() {
   }, [isOpen]);
 
   // Smooth scroll helper function
-  function scrollToSection(id: string) {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+function scrollToSection(id: string) {
+  const element = document.getElementById(id);
+  if (element) {
+    const yOffset = -80; // header height
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
   }
+}
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-background shadow-sm">

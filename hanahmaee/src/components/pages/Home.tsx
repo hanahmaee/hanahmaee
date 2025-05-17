@@ -45,7 +45,10 @@ export default function HomeSection() {
   useEffect(() => {
     function handleAnchorClick(event: MouseEvent) {
       const target = event.target as HTMLElement;
-      if (target.tagName === "A" && target.getAttribute("href")?.startsWith("#")) {
+      if (
+        target.tagName === "A" &&
+        target.getAttribute("href")?.startsWith("#")
+      ) {
         event.preventDefault();
         const id = target.getAttribute("href")!.substring(1);
         const el = document.getElementById(id);
@@ -55,7 +58,6 @@ export default function HomeSection() {
       }
     }
     document.addEventListener("click", handleAnchorClick);
-
     return () => {
       document.removeEventListener("click", handleAnchorClick);
     };
@@ -66,7 +68,7 @@ export default function HomeSection() {
       {/* HOME INTRO */}
       <section
         id="home"
-        className="flex flex-col md:flex-row items-center md:items-stretch gap-10 md:gap-8 mb-20"
+        className="flex flex-col md:flex-row items-center md:items-stretch gap-10 md:gap-8 mb-10 pt-[80px] -mt-[80px]"
       >
         {/* TEXT */}
         <motion.div
@@ -83,14 +85,13 @@ export default function HomeSection() {
             <span className="inline-block animate-pulse">|</span>
           </h2>
           <p className="max-w-xl text-muted-foreground text-base lg:text-xl mx-auto md:mx-0">
-            I love building thoughtful user experiences and managing creative projects with clarity
-            and heart.
+            I love building thoughtful user experiences and managing creative
+            projects with clarity and heart.
           </p>
 
-          {/* NEW BUTTON */}
           <div>
             <a
-              href="#projects"
+              href="#portfolio"
               className="text-yellow-500 font-semibold px-6 py-2 border border-yellow-500 rounded-full transition-shadow hover:shadow-[0_0_10px_rgba(234,179,8,0.8)]"
             >
               &lt;View Projects&gt;
@@ -135,7 +136,10 @@ export default function HomeSection() {
               {/* BACK */}
               <div
                 className="absolute inset-0 rounded-xl overflow-hidden border shadow-lg group-hover:shadow-[0_0_20px_rgba(234,179,8,0.8)] transition-shadow duration-300"
-                style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
+                style={{
+                  backfaceVisibility: "hidden",
+                  transform: "rotateY(180deg)",
+                }}
               >
                 <Image
                   src="/profile-back.jpg"
@@ -167,81 +171,160 @@ export default function HomeSection() {
           </span>
           <div className="w-[1px] h-6 bg-muted hidden md:block" />
           <div className="flex gap-4 md:flex-col">
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Facebook"
-            >
+            <a href="https://facebook.com" target="_blank" rel="noreferrer">
               <FaFacebookF size={22} />
             </a>
-            <a
-              href="https://tiktok.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="TikTok"
-            >
+            <a href="https://tiktok.com" target="_blank" rel="noreferrer">
               <FaTiktok size={22} />
             </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-            >
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
               <FaLinkedinIn size={22} />
             </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram"
-            >
+            <a href="https://instagram.com" target="_blank" rel="noreferrer">
               <FaInstagram size={22} />
             </a>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-            >
+            <a href="https://github.com" target="_blank" rel="noreferrer">
               <FaGithub size={22} />
             </a>
           </div>
         </motion.div>
       </section>
 
-      {/* ABOUT SECTION */}
-      <section
-        id="about"
-        className="mb-20 max-w-4xl mx-auto px-4"
-      >
-        <h2 className="text-4xl font-bold text-center mb-8 text-foreground">
-          About Me
-        </h2>
-        <div className="text-foreground text-lg leading-relaxed space-y-4">
-          <p>
-            I am passionate about technology and education. Here's a summary of my educational background:
-          </p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>
-              <strong>Bachelor of Science in Computer Science</strong> - XYZ University, 2020 - 2024
-            </li>
-            <li>
-              <strong>High School Diploma</strong> - ABC High School, 2016 - 2020
-            </li>
-            <li>
-              <strong>Certifications:</strong> Front-End Development, Project Management Professional (PMP)
-            </li>
-          </ul>
-          <p>
-            My education has provided me with strong foundations in software development, project management, and creative problem-solving.
-          </p>
-        </div>
-      </section>
+    {/* SKILL CARDS */}
+    <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-16 pt-4 gap-6 mb-4 px-4 ">
+      {[
+        {
+          title: "Front-End Development",
+          desc: "HTML, CSS, JavaScript, React, Tailwind CSS, Next.js",
+        },
+        {
+          title: "Project Management", 
+          desc: "Agile methodology, team coordination, PMP certified",
+        },
+        {
+          title: "UI/UX Design",
+          desc: "Figma, Adobe XD, user-centered design principles",
+        },
+      ].map((card, idx) => (
+        <motion.div
+          key={idx}
+          className=" bg-card border border-muted shadow-xl rounded-lg p-6 text-center
+          transition-shadow duration-100 hover:shadow-[0_0_25px_5px_rgba(250,204,21,0.7)]"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: idx * 0.2 }}
+        >
+          <h3 className="text-xl font-semibold mb-2 text-foreground">
+            {card.title}
+          </h3>
+          <p className="text-muted-foreground text-sm">{card.desc}</p>
+        </motion.div>
+      ))}
+</section>
+
+ {/* ABOUT SECTION */}
+<section
+  id="about"
+  className="min-h-screen flex flex-col items-center pt-24 px-4 max-w-7xl mx-auto"
+>
+  <h2 className="text-4xl font-bold text-center mb-10 text-foreground">
+    About Me
+  </h2>
+
+<div className="flex flex-col lg:flex-row gap-6 w-full items-center">
+    {/* LEFT: Profile Image (Centered and responsive) */}
+    <motion.div
+      className="w-full lg:w-[45%] flex justify-center"
+      initial={{ opacity: 0, x: -30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      <div className="relative w-[300px] h-[400px] sm:w-[350px] sm:h-[450px] md:w-[400px] md:h-[500px]">
+        <Image
+          src="/profile-front.png"
+          alt="Hanah Mae"
+          fill
+          className="object-cover"
+        />
+      </div>
+    </motion.div>
+
+    {/* RIGHT: Education Timeline */}
+    <div className="w-full lg:w-[55%] flex flex-col gap-6 relative before:absolute before:left-4 before:top-2 before:bottom-2 before:w-[2px] before:bg-yellow-400">
+      {[
+        {
+          school: "Bulacan State University",
+          level: "Bachelor of Science in Information Technology",
+          year: "2021 – Present",
+          major: "Major in Web and Mobile Development",
+          awards: [
+            "Dean’s Lister & President’s Lister",
+            "Capstone: VR game for computer networking",
+          ],
+        },
+        {
+          school: "Lord's Angels Montessori School",
+          level: " ",
+          year: "2019 – 2021",
+          major: "Science, Technology, Engineering, and Mathematics",
+          awards: [
+            "With High Honors",
+            "Research presenter in regional fair",
+          ],
+        },
+        {
+          school: "Malolos City High School - Santisima Trinidad",
+          level: "Secondary Education",
+          year: "2015 – 2019",
+          major: " ",
+          awards: [
+            "Valedictorian",
+            "High Honors",
+            "Leadership roles in student council",
+          ],
+        },
+      ].map((edu, index) => (
+          <motion.div
+            key={index}
+            className="relative bg-card w-full max-w-[650px] shadow-xl hover:shadow-[0_0_25px_5px_rgba(250,204,21,0.7)]
+            rounded-lg px-6 py-4 pl-10 transition-shadow duration-300"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+          >
+            <div className="flex justify-between items-start text-xl text-foreground font-semibold">
+              <span className="whitespace-nowrap">{edu.school}</span>
+              <span className="text-base whitespace-nowrap">{edu.year}</span>
+            </div>
+
+            <div className="flex justify-between text-base text-muted-foreground">
+              <span>{edu.level || "—"}</span>
+            </div>
+
+            <div className="flex justify-between text-base text-muted-foreground mb-2">
+              <span>{edu.major || "—"}</span>
+            </div>
+
+            <ul className="list-disc list-inside text-muted-foreground text-sm space-y-1">
+              {edu.awards.map((point, idx) => (
+                <li key={idx}>{point}</li>
+              ))}
+            </ul>
+          </motion.div>
+
+                ))}
+              </div>
+            </div>
+          </section>
 
       {/* PORTFOLIO */}
-      <section id="portfolio" className="mb-20">
+      <section
+        id="portfolio"
+        className="min-h-screen flex flex-col justify-center px-4"
+      >
         <h2 className="text-4xl font-bold text-center mb-10 text-foreground">
           Portfolio
         </h2>
@@ -267,8 +350,8 @@ export default function HomeSection() {
                   Project Title {project}
                 </h3>
                 <p className="text-muted-foreground text-sm mt-1">
-                  A brief description of project {project} highlighting
-                  key features and technologies used.
+                  A brief description of project {project} highlighting key
+                  features and technologies used.
                 </p>
               </div>
             </motion.div>
@@ -279,7 +362,7 @@ export default function HomeSection() {
       {/* CONTACT */}
       <section
         id="contact"
-        className="max-w-xl mx-auto mb-10 px-4"
+        className="min-h-screen flex flex-col justify-center max-w-xl mx-auto px-4"
       >
         <h2 className="text-4xl font-bold text-center mb-10 text-foreground">
           Contact Me
