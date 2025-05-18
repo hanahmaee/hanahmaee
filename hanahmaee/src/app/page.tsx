@@ -1,6 +1,6 @@
-import Header from "@/components/pages/Header";
+import Header from "@/custom/Header";
 import Home from "@/components/pages/Home";
-import Footer from "@/components/pages/Footer";
+import Footer from "@/custom/Footer";
 
 
 export default function Page() {

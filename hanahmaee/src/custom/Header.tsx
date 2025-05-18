@@ -20,12 +20,10 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  // Close mobile menu when route changes
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
 
-  // Close mobile menu on click outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       const target = event.target as HTMLElement;
@@ -43,15 +41,14 @@ export default function Header() {
     };
   }, [isOpen]);
 
-  // Smooth scroll helper function
-function scrollToSection(id: string) {
-  const element = document.getElementById(id);
-  if (element) {
-    const yOffset = -80; // header height
-    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    window.scrollTo({ top: y, behavior: "smooth" });
+  function scrollToSection(id: string) {
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -80;
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   }
-}
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-background shadow-sm">
@@ -65,18 +62,18 @@ function scrollToSection(id: string) {
             height={40}
             className="rounded-sm"
           />
-          <span className="font-bold text-lg text-foreground dark:text-white">
+          <span className="font-bold text-lg text-black dark:text-white">
             Hanahmaee
           </span>
         </Link>
 
         {/* Desktop Nav */}
         <nav
-          className="hidden md:flex space-x-8 items-center text-based font-medium"
+          className="hidden md:flex space-x-8 items-center text-base font-medium"
           aria-label="Primary Navigation"
         >
           {navLinks.map((link) => {
-            const id = link.href.substring(1); // Remove '#' for id
+            const id = link.href.substring(1);
             return (
               <a
                 key={link.label}
@@ -86,7 +83,7 @@ function scrollToSection(id: string) {
                   scrollToSection(id);
                   setIsOpen(false);
                 }}
-                className="relative text-foreground dark:text-white hover:text-yellow-500 transition-all
+                className="relative text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-500 transition-all
                 after:absolute after:content-[''] after:w-full after:h-[2px] after:bg-yellow-500 after:left-0 after:-bottom-1 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left"
                 tabIndex={0}
               >
@@ -106,7 +103,7 @@ function scrollToSection(id: string) {
             aria-expanded={isOpen}
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <RiCloseFill size={30} /> : <HiOutlineMenu size={30} />}
+            {isOpen ? <RiCloseFill size={30} className="text-black dark:text-white" /> : <HiOutlineMenu size={30} className="text-black dark:text-white" />}
           </Button>
         </div>
       </div>
@@ -128,7 +125,7 @@ function scrollToSection(id: string) {
                   scrollToSection(id);
                   setIsOpen(false);
                 }}
-                className="block py-2 text-foreground dark:text-white hover:text-yellow-500 transition-colors"
+                className="block py-2 text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-500 transition-colors"
                 tabIndex={0}
               >
                 {link.label}
