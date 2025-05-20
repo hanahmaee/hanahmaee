@@ -45,15 +45,17 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: #fbf8f3;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
 
-  --primary: oklch(0.83 0.2 85);
-  --primary-foreground: oklch(0.145 0 0);
+  --font-geist-mono: 'Geist Mono', monospace;
+
+  --primary: #7b4c2c; /* Mocha brown */
+  --primary-foreground: #ffffff; /* White for strong contrast */
 
   --secondary: oklch(0.145 0 0);
   --secondary-foreground: oklch(0.985 0 0);
@@ -82,16 +84,16 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
+  --background: #0a0703; /* dark chocolate */
+  --foreground: oklch(0.98 0.01 85); /* light text for contrast */
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
 
-  /* ✅ yellow-500 as primary (reversed foreground) */
-  --primary: oklch(0.83 0.2 85);
-  --primary-foreground: oklch(0.145 0 0);
+/* ✅ mocha theme */
+--primary: #7b4c2c; /* mocha brown fallback */
+--primary-foreground: #7b4c2c;      /* light text for contrast */
 
   /* ✅ black as secondary (keep readable foreground) */
   --secondary: oklch(0.145 0 0);
@@ -132,3 +134,5 @@
 html {
   scroll-behavior: smooth;
 }
+
+

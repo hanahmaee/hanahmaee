@@ -27,7 +27,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <main className="w-full bg-white dark:bg-background px-4 pt-16 pb-12 max-w-7xl mx-auto">
+    <main className="w-full px-4 pt-16 pb-12 max-w-7xl mx-auto">
       {/* CONTACT */}
       <section
         id="contact"

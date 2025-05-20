@@ -52,19 +52,19 @@ export default function VerticalNav() {
           key={section}
           href={`#${section}`}
           className={`flex flex-col items-center group transition-colors duration-500 ease-in-out ${
-            activeSection === section ? "text-yellow-400" : "text-muted-foreground"
+            activeSection === section ? "text-primary" : "text-muted-foreground"
           }`}
         >
           {/* Animated Circle */}
           <span
             className={`w-4 h-4 rounded-full border-2 mb-2 transition-all duration-500 ease-in-out transform ${
               activeSection === section
-                ? "bg-yellow-400 border-yellow-400 scale-110"
+                ? "bg-primary border-primary scale-110"
                 : "border-gray-400 scale-100"
             }`}
           />
           {/* Label with smooth hover */}
-          <span className="text-sm capitalize transition-colors duration-300 ease-in-out group-hover:text-yellow-400">
+          <span className="text-sm capitalize transition-colors duration-300 ease-in-out group-hover:text-primary">
             {section.replace("-", " ")}
           </span>
           {/* Vertical Line */}

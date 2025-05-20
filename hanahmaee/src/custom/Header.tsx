@@ -51,7 +51,7 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-background shadow-sm">
+    <header className="fixed top-0 left-0 w-full z-50 bg-beige dark:bg-background shadow-sm">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4 md:py-4">
         {/* Logo + Site Name */}
         <Link href="/" className="flex items-center space-x-2" tabIndex={0}>
@@ -83,8 +83,8 @@ export default function Header() {
                   scrollToSection(id);
                   setIsOpen(false);
                 }}
-                className="relative text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-500 transition-all
-                after:absolute after:content-[''] after:w-full after:h-[2px] after:bg-yellow-500 after:left-0 after:-bottom-1 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left"
+                className="relative text-black dark:text-white hover:text-primary dark:hover:text-primary transition-all
+                after:absolute after:content-[''] after:w-full after:h-[2px] after:bg-primary after:left-0 after:-bottom-1 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left"
                 tabIndex={0}
               >
                 {link.label}
@@ -103,7 +103,7 @@ export default function Header() {
             aria-expanded={isOpen}
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <RiCloseFill size={30} className="text-black dark:text-white" /> : <HiOutlineMenu size={30} className="text-black dark:text-white" />}
+            {isOpen ? <RiCloseFill size={30} /> : <HiOutlineMenu size={30} />}
           </Button>
         </div>
       </div>
@@ -111,7 +111,7 @@ export default function Header() {
       {/* Mobile Menu */}
       {isOpen && (
         <nav
-          className="md:hidden bg-white dark:bg-background px-6 pb-4 space-y-2 text-sm font-medium"
+          className="md:hidden px-6 pb-4 space-y-2 text-sm font-medium"
           aria-label="Mobile Navigation"
         >
           {navLinks.map((link) => {
@@ -125,7 +125,7 @@ export default function Header() {
                   scrollToSection(id);
                   setIsOpen(false);
                 }}
-                className="block py-2 text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-500 transition-colors"
+                className="block py-2 text-black dark:text-white hover:text-primary dark:hover:text-primary transition-colors"
                 tabIndex={0}
               >
                 {link.label}
