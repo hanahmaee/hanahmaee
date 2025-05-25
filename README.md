@@ -1,18 +1,13 @@
 <h1 align="center">Access Granted – Hello, I'm Hanah 👩‍💻</h1>
 
-###
-
-<p align="center">📍 <strong>Bulacan</strong> &nbsp;|&nbsp; 💻 <strong>Bachelor of Science in Information Technology – Major in Web and Mobile Development</strong></p>
-
-###
+<p align="center">
+  📍 <strong>Bulacan</strong> &nbsp;|&nbsp; 💻 <strong>Bachelor of Science in Information Technology – Major in Web and Mobile Development</strong>
+</p>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=hanahmaee&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&hide=stars&theme=dracula&locale=en&hide_border=false" height="150" alt="Hanah's GitHub Stats" />
-  
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=hanahmaee&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="150" alt="Hanah's Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=hanahmaee&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&hide=stars&theme=dracula&locale=en&hide_border=false&cache_seconds=1800" height="150" alt="Hanah's GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=hanahmaee&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&cache_seconds=1800" height="150" alt="Hanah's Top Languages" />
 </div>
-
-###
 
 <h3 align="center">💻 Tech Stack</h3>
 
@@ -28,8 +23,6 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="30" alt="C++" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="30" alt="Java" />
 </div>
-
-###
 
 <h3 align="center">🌐 Connect with Me</h3>
 
