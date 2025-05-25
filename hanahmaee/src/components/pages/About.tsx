@@ -64,33 +64,10 @@ const techStackRectangular = [
   { icon: FaJava, label: "Java" },
 ];
 
-const roles = [
-  "Front-End Developer",
-  "Project Manager",
-  "UI/UX Designer",
-];
-
 export default function About() {
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
-
-  useEffect(() => {
-    const i = loopNum % roles.length;
-    const fullText = roles[i];
-    const updatedText = isDeleting
-      ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (!isDeleting && updatedText === fullText) {
-      setTimeout(() => setIsDeleting(true), 1500);
-    } else if (isDeleting && updatedText === "") {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-    }
-  }, [text, isDeleting, loopNum]);
 
   useEffect(() => {
     function handleAnchorClick(event: MouseEvent) {
@@ -398,10 +375,7 @@ export default function About() {
             </h2>
           </motion.div>
 
-          {/* Tech Stack Grid
-              Mobile: 2 or 3 items in a single row
-              Tablet+ : two lines grid
-          */}
+          {/* Tech Stack Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-6 sm:grid-rows-2 gap-4 justify-center max-w-5xl mx-auto px-2">
             {techStackRectangular.map((tech, idx) => {
               const Icon = tech.icon;

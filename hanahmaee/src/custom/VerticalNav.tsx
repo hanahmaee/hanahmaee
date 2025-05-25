@@ -1,10 +1,12 @@
-"use client";
-import { useEffect, useState } from "react";
+'use client';
 
-const sections = ["about", "education", "skills"];
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+
+const sections = ['about', 'education', 'skills'];
 
 export default function VerticalNav() {
-  const [activeSection, setActiveSection] = useState("about");
+  const [activeSection, setActiveSection] = useState('about');
   const [showNav, setShowNav] = useState(false);
 
   useEffect(() => {
@@ -29,48 +31,51 @@ export default function VerticalNav() {
         setActiveSection(current.id);
       }
 
-      const aboutSection = positions.find((section) => section.id === "about");
-      if (aboutSection) {
+      const skillsSection = positions.find((section) => section.id === 'skills');
+      if (skillsSection) {
         setShowNav(
-          window.scrollY >= aboutSection.offsetTop && window.scrollY < aboutSection.offsetBottom
+          window.scrollY >= positions[0].offsetTop &&
+          window.scrollY < skillsSection.offsetBottom
         );
       }
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [activeSection]);
 
   if (!showNav) return null;
 
   return (
-    <div className="hidden lg:flex fixed right-6 top-1/2 transform -translate-y-1/2 flex-col items-center gap-10 z-50">
+    <motion.div
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      className="hidden lg:flex fixed right-6 top-1/2 transform -translate-y-1/2 flex-col items-center gap-10 z-50"
+    >
       {sections.map((section, idx) => (
         <a
           key={section}
           href={`#${section}`}
           className={`flex flex-col items-center group transition-colors duration-500 ease-in-out ${
-            activeSection === section ? "text-primary" : "text-muted-foreground"
+            activeSection === section ? 'text-primary' : 'text-muted-foreground'
           }`}
         >
-          {/* Animated Circle */}
           <span
             className={`w-4 h-4 rounded-full border-2 mb-2 transition-all duration-500 ease-in-out transform ${
               activeSection === section
-                ? "bg-primary border-primary scale-110"
-                : "border-gray-400 scale-100"
+                ? 'bg-primary border-primary scale-110'
+                : 'border-gray-400 scale-100'
             }`}
           />
-          {/* Label with smooth hover */}
           <span className="text-sm capitalize transition-colors duration-300 ease-in-out group-hover:text-primary">
-            {section.replace("-", " ")}
+            {section.replace('-', ' ')}
           </span>
-          {/* Vertical Line */}
           {idx !== sections.length - 1 && <div className="h-12 w-px bg-gray-300 mt-2" />}
         </a>
       ))}
-    </div>
+    </motion.div>
   );
 }
