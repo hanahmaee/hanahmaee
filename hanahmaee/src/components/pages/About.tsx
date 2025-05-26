@@ -92,7 +92,7 @@ export default function About() {
   }, []);
 
   return (
-    <main className="scroll-smooth w-full dark:bg-background px-4 pt-15 pb-12 max-w-7xl mx-auto">
+    <main className="scroll-smooth w-full dark:bg-background px-4 pt-15 max-w-7xl mx-auto">
       <section
         id="about"
         className="min-h-screen flex flex-col items-center pt-24 px-4 max-w-7xl mx-auto"
@@ -239,7 +239,7 @@ export default function About() {
             </div>
           </motion.div>
           <div className="w-full lg:w-[55%] flex flex-col gap-6 relative
-            before:absolute before:left-4 before:top-2 before:bottom-2 before:w-[2px] before:bg-primary
+            before:absolute before:left-4 before:top-2 before:bottom-2 before:w-[2px]
             before:block lg:before:block
             sm:before:hidden
           ">
@@ -272,7 +272,7 @@ export default function About() {
             ].map((edu, index) => (
               <motion.div
                 key={index}
-                className="relative bg-card w-full max-w-full shadow-xl hover:shadow-[0_0_20px_0_var(--primary)] rounded-lg px-4 py-5
+                className="relative w-full max-w-full shadow-xl hover:shadow-[0_0_20px_0_var(--primary)] rounded-lg px-4 py-5
                   sm:px-6 sm:py-6
                   transition-shadow duration-300
                 "
@@ -341,7 +341,7 @@ export default function About() {
                       flex flex-col items-center mt-3
                     "
                   >
-                    <Icon className="text-primary w-16 h-16 mb-3" />
+                    <Icon className="text-primary w-16 h-16" />
                     <h3 className="text-xl font-semibold">{card.title}</h3>
                   </div>
 
@@ -388,7 +388,6 @@ export default function About() {
                     w-[140px] h-14
                     border rounded-lg px-4
                     shadow-xl
-                    bg-card
                     transition-shadow duration-300
                     hover:shadow-[0_0_20px_0_var(--primary)]
                     cursor-default

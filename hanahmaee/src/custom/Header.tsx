@@ -51,7 +51,7 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-beige dark:bg-background shadow-sm">
+    <header className="fixed top-0 left-0 w-full z-50 shadow-sm" style={{ backgroundColor: "var(--background)" }}>
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4 md:py-4">
         {/* Logo + Site Name */}
         <Link href="/" className="flex items-center space-x-2" tabIndex={0}>
