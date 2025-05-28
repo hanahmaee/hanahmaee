@@ -150,3 +150,16 @@ html {
 .animate-slowType {
   animation: slowType 1.5s ease-out forwards;
 }
+
+
+.clip-hexagon {
+  clip-path: polygon(
+    50% 0%,
+    93% 25%,
+    93% 75%,
+    50% 100%,
+    7% 75%,
+    7% 25%
+  );
+}
+

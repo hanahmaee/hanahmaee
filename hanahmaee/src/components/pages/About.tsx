@@ -30,8 +30,10 @@ import {
   SiSocketdotio,
   SiTypescript,
   SiPhp,
+  SiJest,
 } from "react-icons/si";
 
+import { RiHomeGearFill } from "react-icons/ri";
 const skillCards = [
   {
     title: "UI/UX Design",
@@ -62,6 +64,7 @@ const techStackRectangular = [
   { icon: FaDatabase, label: "SQL" },
   { icon: SiTypescript, label: "TypeScript" },
   { icon: FaJava, label: "Java" },
+  { icon: RiHomeGearFill, label: "Testing"},
 ];
 
 export default function About() {
@@ -175,15 +178,15 @@ export default function About() {
             >
               <div className="hidden sm:flex flex-col space-y-6">
                 <div>
-                  <p className="text-3xl font-bold text-foreground">4</p>
+                  <p className="text-5xl font-bold text-foreground">4</p>
                   <p className="text-muted-foreground">Year Bachelor's Degree</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-foreground">5+</p>
+                  <p className="text-5xl font-bold text-foreground">5+</p>
                   <p className="text-muted-foreground">Talking Stage (One per year)</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-foreground">0</p>
+                  <p className="text-5xl font-bold text-foreground">0</p>
                   <p className="text-muted-foreground">Boyfriend</p>
                 </div>
                 <div className="mt-6">
@@ -308,14 +311,14 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-8"
           >
             <h2 className="text-4xl font-bold italic text-foreground">
               Let’s build something amazing together...
             </h2>
           </motion.div>
 
-          <div className="flex flex-col md:flex-row gap-6 mb-12">
+          <div className="flex flex-col md:flex-row gap-6 mb-4">
             {skillCards.map((card, idx) => {
               const Icon = card.icon;
               return (
@@ -338,19 +341,18 @@ export default function About() {
                     className="
                       transition-all duration-500
                       group-hover/card:-translate-y-6
-                      flex flex-col items-center mt-3
+                      flex flex-col items-center
                     "
                   >
-                    <Icon className="text-primary w-16 h-16" />
-                    <h3 className="text-xl font-semibold">{card.title}</h3>
+                <Icon className="text-primary w-16 h-16" />
+                <h3 className="text-xl font-semibold mt-3">{card.title}</h3>
                   </div>
-
                   <p
                     className="
                       text-sm text-muted-foreground 
                       opacity-0 max-h-0 overflow-hidden
                       transition-all duration-500 ease-in-out
-                      group-hover/card:opacity-100 group-hover/card:max-h-36 mt-3 px-2
+                      group-hover/card:opacity-100 group-hover/card:max-h-36 px-2
                     "
                   >
                     {card.desc}
@@ -361,51 +363,51 @@ export default function About() {
           </div>
         </section>
 
-        {/* TECH STACK */}
-        <section id="tech-stack" className="w-full px-4 pb-16 justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-8"
-          >
-            <h2 className="text-3xl font-bold italic text-foreground">
-              Tech Stack
-            </h2>
-          </motion.div>
+    {/* TECH STACK */}
+    <section id="tech-stack" className="w-full px-4 justify-center">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-8"
+      >
+        <h2 className="text-3xl font-bold italic text-foreground">
+          Tech Stack
+        </h2>
+      </motion.div>
 
-          {/* Tech Stack Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-6 sm:grid-rows-2 gap-4 justify-center max-w-5xl mx-auto px-2">
-            {techStackRectangular.map((tech, idx) => {
-              const Icon = tech.icon;
-              return (
-                <motion.div
-                  key={idx}
-                  className="
-                    group
-                    flex items-center gap-3
-                    w-[140px] h-14
-                    border rounded-lg px-4
-                    shadow-xl
-                    transition-shadow duration-300
-                    hover:shadow-[0_0_20px_0_var(--primary)]
-                    cursor-default
-                    select-none
-                    justify-center
-                  "
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: idx * 0.1 }}
-                >
-                  <Icon className="text-primary w-7 h-7" />
-                  <span className="font-semibold text-foreground text-lg truncate">{tech.label}</span>
-                </motion.div>
-              );
-            })}
-          </div>
-        </section>
+      {/* Tech Stack Grid */}
+      <div className="grid grid-cols-4 grid-rows-3 gap-6 justify-center max-w-4xl mx-auto px-2">
+        {techStackRectangular.map((tech, idx) => {
+          const Icon = tech.icon;
+          return (
+            <motion.div
+              key={idx}
+              className="
+                group
+                flex flex-col items-center gap-2
+                w-[140px] h-20
+                border rounded-lg px-4
+                shadow-xl
+                transition-shadow duration-300
+                hover:shadow-[0_0_20px_0_var(--primary)]
+                cursor-default
+                select-none
+                justify-center
+              "
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: idx * 0.1 }}
+            >
+              <Icon className="text-primary w-7 h-7" />
+              <span className="font-semibold text-foreground text-lg truncate text-center">{tech.label}</span>
+            </motion.div>
+          );
+        })}
+      </div>
+    </section>
       </section>
     </main>
   );
