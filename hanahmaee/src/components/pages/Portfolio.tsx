@@ -31,7 +31,7 @@ const items = [
   {
     title: "UI/UX Design",
     description:
-      "Designs modern interfaces with a focus on user experience. Aims to make interactions simple and intuitive.",
+      "Designs modern interfaces with a focus on user experience. Aims to make interactions simple, easy to navigate, and intuitive.",
     icon: "/web.jpg",
     link: "/portfolio/mobile-development",
     colSpan: "md:col-span-4", // Bottom right (wide)
@@ -42,20 +42,21 @@ export default function Portfolio() {
   const router = useRouter();
 
   return (
-    <main className="scroll-smooth w-full dark:bg-background px-4 pt-24 pb-12 max-w-7xl mx-auto">
+    <main className="scroll-smooth w-full dark:bg-background px-4 pt-24 max-w-7xl mx-auto">
       <section
         id="portfolio"
         className="min-h-screen flex flex-col items-center pt-24 px-4 max-w-7xl mx-auto"
       >
         <div className="max-w-6xl mx-auto w-full">
-          <h2 className="text-4xl font-bold text-center mb-10">Portfolio</h2>
+          <h2 className="text-4xl font-bold text-center mb-6">Portfolio</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
             {items.map((item, i) => (
               <motion.div
                 key={i}
                 onClick={() => router.push(item.link)}
-                className={`col-span-1 ${item.colSpan} cursor-pointer rounded-2xl flex flex-col justify-between overflow-hidden border border-border/40 backdrop-blur-md shadow-lg transition-transform duration-300 hover:scale-[1.03] hover:shadow-[0_0_20px_0_var(--primary)]`}
+                className={`col-span-1 ${item.colSpan} cursor-pointer rounded-2xl flex flex-col justify-between overflow-hidden dark:bg-[#0d0c0a] 
+                border-border/40 backdrop-blur-md shadow-lg transition-transform duration-300 hover:scale-[1.03] hover:shadow-[0_0_20px_0_var(--primary)]`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -71,7 +72,7 @@ export default function Portfolio() {
                 </div>
 
                 <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-primary">{item.title}</h3>
                   <p className="text-sm opacity-90 leading-relaxed break-words">
                     {item.description}
                   </p>

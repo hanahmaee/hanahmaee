@@ -128,7 +128,7 @@ useEffect(() => {
           <motion.div className="group" variants={childVariants}>
             <a
               href="#portfolio"
-              className="ml-10 text-2xl font-mono font-semibold px-6 py-2 border rounded-full transition-all shadow-2xl duration-300 group-hover:shadow-[0_0_20px_0_var(--primary)]"
+              className="ml-10 text-white text-2xl font-mono bg-primary font-semibold px-6 py-2 border rounded-full transition-all shadow-2xl"
             >
               &lt;View Projects&gt;
             </a>
@@ -229,18 +229,10 @@ useEffect(() => {
         </div>
       </section>
 
-      {/* ABOUT */}
-      <div className="mr-12">
+      {/* PAGES */}
+      <div>
         <About />
-      </div>
-
-      {/* PORTFOLIO */}
-      <div className="mr-12">
         <Portfolio />
-      </div>
-
-      {/* CONTACT */}
-      <div className="mr-12">
         <Contact />
       </div>
     </main>

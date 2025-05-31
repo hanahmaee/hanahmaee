@@ -137,7 +137,7 @@ export default function About() {
               </p>
               <a
                 href="#contact"
-                className="hidden sm:inline-block mt-4 px-6 py-3 bg-primary text-black font-semibold rounded-md hover:bg-primary transition"
+                className="hidden sm:inline-block mt-4 px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary transition"
               >
                 LET'S TALK →
               </a>
@@ -151,15 +151,15 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <div className="w-full h-full flex items-center justify-center">
-                <div className="w-full h-full rounded-xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/about.png"
-                    alt="Hanah Mae Profile"
-                    width={500}
-                    height={500}
-                    className="object-cover w-full h-full"
-                  />
-                </div>
+              <div className="w-full h-full overflow-hidden">
+                <Image
+                  src="/about.png"
+                  alt="Hanah Mae Profile"
+                  width={500}
+                  height={500}
+                  className="object-cover w-full h-full"
+                />
+              </div>
               </div>
               <a
                 href="#contact"
@@ -232,9 +232,9 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="relative w-[300px] h-[400px] sm:w-[350px] sm:h-[450px] md:w-[400px] md:h-[500px]">
+          <div className="relative w-[500px] h-[600px] sm:w-[350px] sm:h-[450px] md:w-[450px] md:h-[550px] lg:w-[500px] lg:h-[600px]">
               <Image
-                src="/profile-front.png"
+                src="/edu.png"
                 alt="Hanah Mae"
                 fill
                 className="object-cover"
@@ -278,6 +278,7 @@ export default function About() {
                 className="relative w-full max-w-full shadow-xl hover:shadow-[0_0_20px_0_var(--primary)] rounded-lg px-4 py-5
                   sm:px-6 sm:py-6
                   transition-shadow duration-300
+                  dark:bg-[#0d0c0a]
                 "
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -328,9 +329,10 @@ export default function About() {
                     group/card
                     flex-1 min-h-[250px]
                     flex flex-col items-center justify-center
-                    border rounded-lg p-5 text-center shadow-xl
+                    rounded-lg p-5 text-center shadow-xl
                     transition-all duration-300
                     hover:shadow-[0_0_20px_0_var(--primary)]
+                    dark:bg-[#0d0c0a]
                   "
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -378,7 +380,7 @@ export default function About() {
       </motion.div>
 
       {/* Tech Stack Grid */}
-      <div className="grid grid-cols-4 grid-rows-3 gap-6 justify-center max-w-4xl mx-auto px-2">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-center max-w-4xl mx-auto px-2">
         {techStackRectangular.map((tech, idx) => {
           const Icon = tech.icon;
           return (
@@ -388,8 +390,9 @@ export default function About() {
                 group
                 flex flex-col items-center gap-2
                 w-[140px] h-20
-                border rounded-lg px-4
+                rounded-lg px-4
                 shadow-xl
+                dark:bg-[#0d0c0a]
                 transition-shadow duration-300
                 hover:shadow-[0_0_20px_0_var(--primary)]
                 cursor-default

@@ -10,13 +10,14 @@ export default function Footer() {
   return (
     <footer className="w-full border-t mt-12">
       <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between">
-        {/* Logo & Name */}
-        <div className="flex items-center space-x-3 mb-4 md:mb-0">
-          <Image src="/logo.png" alt="Logo" width={32} height={32} />
-          <span className="font-semibold text-lg text-foreground">
-            Hanah Mae Espineda
-          </span>
-        </div>
+
+      {/* Logo & Name */}
+      <div className="flex items-center space-x-3 mb-4 md:mb-0">
+        <Image src="/logo.png" alt="Logo" width={32} height={32} />
+        <span className="font-mono text-lg text-foreground">
+          A journey of growth, one line of code at a time.
+        </span>
+      </div>
 
         {/* Social Media Icons */}
         <div className="flex space-x-6 text-muted-foreground">
