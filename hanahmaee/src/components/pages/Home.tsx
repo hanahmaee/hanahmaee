@@ -10,8 +10,8 @@ import {
   FaInstagram,
   FaGithub,
 } from "react-icons/fa";
-import About from "./About/About";
-import Portfolio from "./Portfolio/Portfolio";
+import About from "./About";
+import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 
 const roles = [

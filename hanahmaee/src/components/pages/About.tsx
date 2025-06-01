@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import VerticalNav from "../../../custom/VerticalNav";
+import VerticalNav from "../../custom/VerticalNav";
 import { FiMapPin } from "react-icons/fi";
 
 
@@ -13,7 +13,7 @@ import {
   techStackRectangular,
   experienceData,
   educationData,
-} from "./aboutConst";
+} from "@/app/About/aboutConst";
 
 export default function About() {
   const [text, setText] = useState("");
