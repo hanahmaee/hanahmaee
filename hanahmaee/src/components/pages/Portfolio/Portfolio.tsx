@@ -72,7 +72,7 @@ export default function Portfolio() {
                 </div>
 
                 <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2 text-primary">{item.title}</h3>
+                  <h3 className="text-2xl font-semibold mb-2 text-primary">{item.title}</h3>
                   <p className="text-sm opacity-90 leading-relaxed break-words">
                     {item.description}
                   </p>

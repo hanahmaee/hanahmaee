@@ -10,8 +10,8 @@ import {
   FaInstagram,
   FaGithub,
 } from "react-icons/fa";
-import About from "./About";
-import Portfolio from "./Portfolio";
+import About from "./About/About";
+import Portfolio from "./Portfolio/Portfolio";
 import Contact from "./Contact";
 
 const roles = [
@@ -101,7 +101,7 @@ useEffect(() => {
 
       {/* TEXT */}
         <motion.div
-          className="order-2 md:order-1 flex-[1.2] flex flex-col justify-center items-start text-left space-y-6 relative pl-6"
+          className="order-1 md:order-1 flex-[1.2] flex flex-col justify-center items-start text-left space-y-6 relative pl-6"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -136,7 +136,7 @@ useEffect(() => {
         </motion.div>
 
         {/* IMAGE + SOCIAL */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 order-1 md:order-2">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 order-2 md:order-2">
           {/* IMAGE */}
           <motion.div
             className="relative group flex items-center justify-center"
