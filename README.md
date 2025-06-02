@@ -1,4 +1,4 @@
-<h1 align="center">Access Granted – Hello, I'm Hanah 👩‍💻</h1>
+<h1 align="center">Access Granted – Hello, I'm Hanah! 👩‍💻</h1>
 
 <p align="center">
   📍 <strong>Bulacan</strong> &nbsp;|&nbsp; 💻 <strong>Bachelor of Science in Information Technology – Major in Web and Mobile Application Development</strong>
