@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { PROJECTS } from "@/app/Portfolio/portfolioConst"; // Adjust path if needed
+import { UIUX } from "@/app/Portfolio/portfolioConst"; // Adjust path if needed
 
 export default function PortfolioSection() {
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function PortfolioSection() {
           transition={{ duration: 0.5 }}
           className="text-5xl font-bold tracking-tight"
         >
-          Web and Mobile Application Development
+          UI and UX Design
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 10 }}
@@ -44,7 +44,7 @@ export default function PortfolioSection() {
       </div>
 
       <div className="space-y-20">
-        {PROJECTS.map((project, idx) => (
+        {UIUX.map((project, idx) => (
           <a
             href={project.link}
             target="_blank"

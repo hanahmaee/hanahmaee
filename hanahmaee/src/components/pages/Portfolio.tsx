@@ -1,61 +1,69 @@
+// Portfolio.tsx
 "use client";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { FaLaptopCode } from "react-icons/fa";
+import { MdOutlineDesignServices } from "react-icons/md";
+import { TbBug } from "react-icons/tb";
+import { BsKanban } from "react-icons/bs";
 
 const portfolioItems = [
   {
-    title: "Web Development",
+    titleLine1: "Web and Mobile",
+    titleLine2: "Application Development",
     description:
       "Creates websites that are functional and user-friendly. Focuses on user needs through wireframes and prototypes.",
-    href: "/webdev",  // changed
-    image: "/web.jpg",
+    href: "/webdev",
     delay: 0,
     colSpan: "md:col-span-4",
+    icon: <FaLaptopCode className="text-primary text-3xl md:text-4xl" />,
   },
   {
-    title: "Project Management",
-    description:
-      "Manages tasks and timelines to keep projects on track and organized.",
-    href: "/projman",  // changed
-    image: "/web.jpg",
+    titleLine1: "Project",
+    titleLine2: "Management",
+    description: "Manages tasks and timelines to keep projects on track and organized.",
+    href: "/projman",
     delay: 0.1,
     colSpan: "md:col-span-2",
+    icon: <BsKanban className="text-primary text-3xl md:text-4xl" />,
   },
   {
-    title: "Software Testing",
-    description:
-      "Tests software to identify bugs and ensure everything works smoothly.",
-    href: "/testing",  // changed
-    image: "/web.jpg",
+    titleLine1: "Software",
+    titleLine2: "Testing",
+    description: "Tests software to identify bugs and ensure everything works smoothly.",
+    href: "/testing",
     delay: 0.2,
     colSpan: "md:col-span-2",
+    icon: <TbBug className="text-primary text-3xl md:text-4xl" />,
   },
   {
-    title: "UI/UX Design",
+    titleLine1: "UI AND UX DESIGN",
+    titleLine2: "PROJECTS",
     description:
       "Designs modern interfaces focused on user experience. Aims to make interactions simple and intuitive.",
-    href: "/ui-ux",  // changed
-    image: "/web.jpg",
+    href: "/ui-ux",
     delay: 0.3,
     colSpan: "md:col-span-4",
+    icon: <MdOutlineDesignServices className="text-primary text-3xl md:text-4xl" />,
   },
 ];
 
 function PortfolioCard({
-  title,
+  titleLine1,
+  titleLine2,
   description,
   href,
-  image,
   delay,
   colSpan,
+  icon,
 }: {
-  title: string;
+  titleLine1: string;
+  titleLine2: string;
   description: string;
   href: string;
-  image: string;
   delay: number;
   colSpan: string;
+  icon: React.ReactNode;
 }) {
   return (
     <Link
@@ -68,24 +76,22 @@ function PortfolioCard({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4, delay }}
-        className="w-full flex flex-col justify-between"
+        className="w-full flex flex-col justify-between h-full"
       >
-        <div className="relative w-full h-40 md:h-52">
-          <Image
-            src={image}
-            alt={title}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw,
-                   (max-width: 1200px) 50vw,
-                   33vw"
-          />
+        {/* Icon + Title */}
+        <div className="w-full px-6 pt-6 pb-2">
+          <div className="flex items-center gap-3 mb-4">
+            {icon}
+            <span className="uppercase tracking-widest text-xs text-primary">Category</span>
+          </div>
+          <h3 className="text-[1.75rem] md:text-[2.5rem] leading-tight font-extrabold text-primary font-sans uppercase">
+            {titleLine1}<br />{titleLine2}
+          </h3>
         </div>
-        <div className="p-4">
-          <h3 className="text-2xl font-semibold mb-2 text-primary">{title}</h3>
-          <p className="text-sm opacity-90 leading-relaxed break-words">
-            {description}
-          </p>
+
+        {/* Description */}
+        <div className="px-6 pb-6 pt-2 flex-grow flex flex-col justify-start">
+          <p className="text-base opacity-90 leading-relaxed">{description}</p>
         </div>
       </motion.div>
     </Link>
@@ -100,7 +106,7 @@ export default function Portfolio() {
         className="min-h-screen flex flex-col items-center pt-24 px-4 max-w-7xl mx-auto"
       >
         <div className="max-w-6xl mx-auto w-full">
-          <h2 className="text-4xl font-bold text-center mb-6">Portfolio</h2>
+          <h2 className="text-5xl font-bold text-center mb-10">Portfolio</h2>
           <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
             {portfolioItems.map((item, index) => (
               <PortfolioCard key={index} {...item} />
