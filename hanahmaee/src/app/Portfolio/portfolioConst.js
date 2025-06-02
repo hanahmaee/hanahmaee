@@ -176,7 +176,7 @@ export const SOFTWARE_TESTING = [
     title: "Test Cases for Digitalization of Church Records Management System",
     description: "Key manual and automated test cases for the church records system.",
     date: "2024",
-    image: "/crmstc.png",
+    image: "/testing/crmstc.png",
     link: "https://tinyurl.com/ChurchRecordsTestCases",
     tags: ["Test Cases", "Manual Testing", "Automation", "Security"],
     screenshots: [
@@ -189,7 +189,7 @@ export const SOFTWARE_TESTING = [
     title: "Test Cases for Packet3D",
     description: "Detailed test scenarios covering VR simulation and network accuracy.",
     date: "2025",
-    image: "/p3dtc.png",
+    image: "/testing/p3dtc.png",
     link: "https://tinyurl.com/Packet3DTestCases",
     tags: ["Test Cases", "VR Testing", "Performance", "Regression"],
     screenshots: [
@@ -203,7 +203,7 @@ export const SOFTWARE_TESTING = [
     description:
       "Load and stress testing, defect tracking, and usability test scenarios for TeachTrove platform.",
     date: "2025",
-    image: "/teachtrovetc.png",
+    image: "/testing/teachtrovetc.png",
     link: "https://tinyurl.com/TeachTroveTestCases",
     tags: ["Test Cases", "Performance", "Load Testing", "Usability"],
     screenshots: [
@@ -220,7 +220,7 @@ export const TEST_PLANS = [
     description:
       "Manual and automated test cases verifying data accuracy, access control, and system integration.",
     date: "2024",
-    image: "/crmstest.png",
+    image: "/testing/crmstest.png",
     pdf: "/testing/CRMS_TestPlan.pdf",
     tags: ["Manual Testing", "Automation", "Data Integrity", "Access Control", "Selenium"]
   },
@@ -229,7 +229,7 @@ export const TEST_PLANS = [
     description:
       "End-to-end testing of Packet3D VR simulation: interactions, simulation accuracy, and performance benchmarks.",
     date: "2025",
-    image: "/p3dtest.png",
+    image: "/testing/p3dtest.png",
     pdf: "/pdfs/Packet3DTestPlan.pdf",
     tags: ["End-to-End", "VR Testing", "Performance", "Bug Tracking", "Regression"]
   },
@@ -238,7 +238,7 @@ export const TEST_PLANS = [
     description:
       "Load and stress testing, defect tracking, and usability testing for the TeachTrove platform.",
     date: "2025",
-    image: "/teachtrovetest.png",
+    image: "/testing/teachtrovetest.png",
     pdf: "/pdfs/TeachTroveTestPlan.pdf",
     tags: ["Performance", "Load Testing", "Usability", "JIRA", "Regression"]
   }
