@@ -5,7 +5,7 @@ export const PROJECTS = [
     description:
       "An immersive 3D simulation game that teaches users how to configure network systems in a virtual environment, enhancing IT learning through gamified experiences.",
     date: "2024",
-    image: "/nft-distro.png",
+    image: "/webdev/p3d.png",
     link: "https://packet3d-daniellecscs-projects.vercel.app/",
     tags: [
       "Capstone Project",
@@ -23,7 +23,7 @@ export const PROJECTS = [
     description:
       "A pixel-style educational puzzle adventure game built with Unity and C#, designed to challenge players through logic-based scenarios and interactive storytelling.",
     date: "2024",
-    image: "/wallet-project.png",
+    image: "/webdev/wor.png",
     link: "https://bit.ly/worldofreyland",
     tags: ["Game Development", "Unity", "C#", "Pixel Art", "Puzzle Game", "Education", "Storytelling"],
   },
@@ -32,7 +32,7 @@ export const PROJECTS = [
     description:
       "A high-end business website built for a tech startup, showcasing services, team, and product integrations through a sleek and responsive React-powered layout.",
     date: "2025",
-    image: "/metaverse-site.png",
+    image: "/webdev/llc.png",
     link: "https://www.luxurylevelco.com/",
     tags: [
       "React",
@@ -49,7 +49,7 @@ export const PROJECTS = [
     description:
       "A clean and elegant static website built for a fiction writer, featuring personal branding, writing archives, and links to external platforms like Wattpad.",
     date: "2025",
-    image: "/metaverse-site.png",
+    image: "/webdev/maesteries.png",
     link: "https://github.com/hanahmaee/maesteries",
     tags: [
       "React",
@@ -176,7 +176,7 @@ export const SOFTWARE_TESTING = [
     title: "Test Cases for Digitalization of Church Records Management System",
     description: "Key manual and automated test cases for the church records system.",
     date: "2024",
-    image: "/software-testing/church-records-testcases.png",
+    image: "/crmstc.png",
     link: "https://tinyurl.com/ChurchRecordsTestCases",
     tags: ["Test Cases", "Manual Testing", "Automation", "Security"],
     screenshots: [
@@ -184,20 +184,12 @@ export const SOFTWARE_TESTING = [
       "/software-testing/church-records-testcase-2.png",
       "/software-testing/church-records-testcase-3.png",
     ],
-    testCases: [
-      "Verify user login with valid and invalid credentials",
-      "Test user registration with all mandatory fields",
-      "Password reset workflow validation",
-      "Role-based access control enforcement",
-      "Data accuracy in record creation and update",
-      "System response on database connection failure",
-    ],
   },
   {
     title: "Test Cases for Packet3D",
     description: "Detailed test scenarios covering VR simulation and network accuracy.",
     date: "2025",
-    image: "/software-testing/packet3d-testcases.png",
+    image: "/p3dtc.png",
     link: "https://tinyurl.com/Packet3DTestCases",
     tags: ["Test Cases", "VR Testing", "Performance", "Regression"],
     screenshots: [
@@ -205,35 +197,19 @@ export const SOFTWARE_TESTING = [
       "/software-testing/packet3d-testcase-2.png",
       "/software-testing/packet3d-testcase-3.png",
     ],
-    testCases: [
-      "Validate VR headset compatibility and calibration",
-      "Test network packet simulation accuracy",
-      "Check user interface responsiveness in VR environment",
-      "Verify error handling during network failures",
-      "Measure frame rate and latency under stress",
-      "Regression tests for previous bug fixes",
-    ],
   },
   {
     title: "Test Cases for TeachTrove",
     description:
       "Load and stress testing, defect tracking, and usability test scenarios for TeachTrove platform.",
     date: "2025",
-    image: "/software-testing/teachtrove-testcases.png",
+    image: "/teachtrovetc.png",
     link: "https://tinyurl.com/TeachTroveTestCases",
     tags: ["Test Cases", "Performance", "Load Testing", "Usability"],
     screenshots: [
       "/software-testing/teachtrove-testcase-1.png",
       "/software-testing/teachtrove-testcase-2.png",
       "/software-testing/teachtrove-testcase-3.png",
-    ],
-    testCases: [
-      "Load testing with concurrent user simulations",
-      "Stress testing beyond maximum user capacity",
-      "Profiling memory and CPU usage during peak loads",
-      "Validate cross-platform UI responsiveness",
-      "Check content upload and retrieval workflows",
-      "Usability testing for navigation and accessibility",
     ],
   },
 ];
@@ -244,7 +220,7 @@ export const TEST_PLANS = [
     description:
       "Manual and automated test cases verifying data accuracy, access control, and system integration.",
     date: "2024",
-    image: "/software-testing/church-records-cover.png",
+    image: "/crmstest.png",
     pdf: "/testing/CRMS_TestPlan.pdf",
     tags: ["Manual Testing", "Automation", "Data Integrity", "Access Control", "Selenium"]
   },
@@ -253,7 +229,7 @@ export const TEST_PLANS = [
     description:
       "End-to-end testing of Packet3D VR simulation: interactions, simulation accuracy, and performance benchmarks.",
     date: "2025",
-    image: "/software-testing/packet3d-test-cover.png",
+    image: "/p3dtest.png",
     pdf: "/pdfs/Packet3DTestPlan.pdf",
     tags: ["End-to-End", "VR Testing", "Performance", "Bug Tracking", "Regression"]
   },
@@ -262,7 +238,7 @@ export const TEST_PLANS = [
     description:
       "Load and stress testing, defect tracking, and usability testing for the TeachTrove platform.",
     date: "2025",
-    image: "/software-testing/teachtrove-test-cover.png",
+    image: "/teachtrovetest.png",
     pdf: "/pdfs/TeachTroveTestPlan.pdf",
     tags: ["Performance", "Load Testing", "Usability", "JIRA", "Regression"]
   }

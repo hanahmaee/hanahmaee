@@ -13,7 +13,6 @@ type TestCaseItem = {
   link: string;
   tags: string[];
   screenshots: string[];
-  testCases?: string[];
 };
 
 type TestPlanItem = {
@@ -93,7 +92,6 @@ export default function SoftwareTestingSection() {
   </FadeInOut>
 );
 
-
   const renderTestCaseCard = (test: TestCaseItem, idx: number) => (
     <FadeInOut key={idx} delay={idx * 0.15}>
       <div
@@ -169,17 +167,6 @@ export default function SoftwareTestingSection() {
           >
             <h2 className="text-2xl font-semibold">{selectedTest.title}</h2>
             <p className="text-sm opacity-80">{selectedTest.description}</p>
-
-            {selectedTest.testCases && (
-              <div className="mt-4">
-                <h3 className="font-semibold mb-2">Test Cases / Scenarios:</h3>
-                <ul className="list-disc list-inside space-y-1 text-sm">
-                  {selectedTest.testCases.map((tc, i) => (
-                    <li key={i}>{tc}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
               {selectedTest.screenshots.map((src: string, i: number) => (

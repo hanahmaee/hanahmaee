@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { UIUX } from "@/app/Portfolio/portfolioConst"; // Adjust path if needed
 
-export default function PortfolioSection() {
+export default function UiUxSection() {
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
@@ -20,7 +20,7 @@ export default function PortfolioSection() {
 
   return (
     <main
-      id="portfolio"
+      id="uiux"
       className="text-black dark:text-white w-full px-4 pt-28 pb-20 max-w-7xl mx-auto"
     >
       <div className="text-center mb-16">
