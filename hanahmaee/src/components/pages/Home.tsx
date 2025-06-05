@@ -180,7 +180,7 @@ useEffect(() => {
                   }}
                 >
                   <Image
-                    src="/profile-back.jpg"
+                    src="/profile-back.JPG"
                     alt="Back"
                     fill
                     className="object-cover"

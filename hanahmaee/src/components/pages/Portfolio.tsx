@@ -106,8 +106,8 @@ export default function Portfolio() {
         className="min-h-screen flex flex-col items-center pt-24 px-4 max-w-7xl mx-auto"
       >
         <div className="max-w-6xl mx-auto w-full">
-          <h2 className="text-5xl font-bold text-center mb-10">Portfolio</h2>
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
+          <h2 className="text-5xl font-bold text-center mb-12">Portfolio</h2>
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
             {portfolioItems.map((item, index) => (
               <PortfolioCard key={index} {...item} />
             ))}

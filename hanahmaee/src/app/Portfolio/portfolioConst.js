@@ -193,8 +193,26 @@ export const SOFTWARE_TESTING = [
     date: "2025",
     image: "/testing/p3dtc.png",
     tags: ["Test Cases", "VR Testing", "Performance", "Regression"],
-    sheetScreenshots: ["/software-testing/packet3d-testcase-1.png"],
-    automationScreenshots: [],
+    sheetScreenshots: [
+      "/testing/p.png",
+      "/testing/p1.png",
+      "/testing/p2.png",
+      "/testing/p3.png",
+      "/testing/p4.png",
+      "/testing/p5.png",
+      "/testing/p6.png",
+
+    ],
+    automationScreenshots: [
+      "/testing/pc.png",
+      "/testing/pc1.png",
+      "/testing/pc2.png",
+      "/testing/pc3.png",
+      "/testing/pc4.png",
+      "/testing/pc5.png",
+      "/testing/pc6.png",
+      "/testing/pc7.png",
+    ],
   },
   {
     title: "A Comprehensive Test Cases for TeachTrove, an E-Learning Platform",
@@ -212,8 +230,13 @@ export const SOFTWARE_TESTING = [
     ]
     ,
     automationScreenshots: [
-      "/software-testing/teachtrove-testcase-2.png",
-      "/software-testing/teachtrovetc-3.png",
+      "/testing/ttc.png",
+      "/testing/ttc1.png",
+      "/testing/ttc2.png",
+      "/testing/ttc3.png",
+      "/testing/ttc4.png",
+      "/testing/ttc5.png",
+      "/testing/ttc6.png",
     ],
   },
 ];
