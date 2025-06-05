@@ -90,7 +90,7 @@ export default function Contact() {
         id="contact"
         className="flex flex-col items-center pt-20 px-4 max-w-7xl mx-auto"
       >
-          <h2 className="text-4xl font-bold text-center mb-4">Get in Touch with Me!</h2>
+          <h2 className="text-5xl font-bold text-center mb-4">Get in Touch with Me!</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 pt-12 gap-12 w-full max-w-6xl items-center">
 

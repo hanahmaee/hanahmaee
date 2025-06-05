@@ -62,14 +62,11 @@ export default function Header() {
             height={40}
             className="rounded-sm"
           />
-          <span className="font-bold text-lg text-black dark:text-white">
-            Hanahmaee
-          </span>
         </Link>
 
         {/* Desktop Nav */}
         <nav
-          className="hidden md:flex space-x-8 items-center text-base font-medium"
+          className="hidden md:flex space-x-8 items-center text-base font-bold"
           aria-label="Primary Navigation"
         >
           {navLinks.map((link) => {

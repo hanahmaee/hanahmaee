@@ -69,13 +69,22 @@ export const techStackRectangular = [
 
 export const experienceData = [
   {
-    date: "January 2025 – May 2025",
+    date: "January 2025 – April 2025",
     position: "Project Manager & Front-End Developer Intern",
     company: "Results Marketing Partners",
     location: "Pennsylvania",
     description: [
       "Worked remotely and managed the project timeline, progress tracking, and software testing of the system.",
       "Developed a help center for the web-based high school management system using React JS Framework, Next JS, and Tailwind CSS with a user-friendly and responsive interface.",
+    ],
+  },
+    {
+    date: "2023",
+    position: "Salesforce Admin Trainee",
+    company: "Salesforce",
+    location: "Bulacan State University",
+    description: [
+      "Successfully completed 15 Super badges demonstrating proficiency in key Salesforce admin skills. ",
     ],
   },
 ];

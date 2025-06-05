@@ -21,26 +21,17 @@ export default function UiUxSection() {
   return (
     <main
       id="uiux"
-      className="text-black dark:text-white w-full px-4 pt-28 pb-20 max-w-7xl mx-auto"
+      className="text-black dark:text-white w-full px-4 pt-20 pb-20 max-w-7xl mx-auto"
     >
-      <div className="text-center mb-16">
+      <div className="text-center mb-18">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-5xl font-bold tracking-tight"
+          className="text-5xl font-bold tracking-tight text-primary"
         >
           UI and UX Design
         </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          className="text-sm mt-4 max-w-2xl mx-auto opacity-70"
-        >
-          Our portfolio showcases our previous work and highlights the quality
-          of our services. Browse through our projects and see for yourself.
-        </motion.p>
       </div>
 
       <div className="space-y-20">
@@ -54,19 +45,19 @@ export default function UiUxSection() {
           >
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: idx * 0.2 }}
               viewport={{ once: true }}
               className="border dark:border-neutral-800 p-4 rounded-xl grid grid-cols-1 md:grid-cols-2 gap-10 items-center transition duration-300 shadow-xl group-hover:shadow-[0_0_15px_0_var(--primary)]"
             >
-              {/* Image with its own hover glow */}
-              <div className="relative w-full h-[250px] sm:h-[350px] md:h-[400px] lg:h-[450px] rounded-xl overflow-hidden border transition duration-300">
+              {/* Responsive image at actual size */}
+              <div className="w-full flex justify-center items-center">
                 <Image
                   src={project.image}
                   alt={project.title}
-                  fill
-                  className="object-cover rounded-xl transition duration-300"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  width={project.width || 1000}
+                  height={project.height || 700}
+                  className="rounded-xl max-w-full h-auto object-contain"
                   priority={idx === 0}
                 />
               </div>
@@ -74,25 +65,25 @@ export default function UiUxSection() {
               {/* Text content */}
               <div className="space-y-4 transition duration-300">
                 <motion.h2
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3, duration: 0.5 }}
-                  className="text-3xl font-semibold"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: idx * 0.2 }}
+                  className="text-3xl font-bold text-primary"
                 >
                   {project.title}
                 </motion.h2>
                 <motion.p
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ delay: 0.4, duration: 0.5 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: idx * 0.2 }}
                   className="opacity-90 text-sm sm:text-base"
                 >
                   {project.description}
                 </motion.p>
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ delay: 0.5, duration: 0.5 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: idx * 0.2 }}
                   className="text-sm mt-4 space-y-1 opacity-80"
                 >
                   <p>
@@ -100,9 +91,9 @@ export default function UiUxSection() {
                   </p>
                 </motion.div>
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ delay: 0.6, duration: 0.5 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: idx * 0.2 }}
                   className="flex flex-wrap gap-2 mt-3"
                 >
                   {project.tags.map((tag, i) => (

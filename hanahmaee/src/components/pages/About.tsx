@@ -63,7 +63,7 @@ const bounceAnimation = {
           <VerticalNav />
         </div>
 
-        <h2 className="text-4xl font-bold text-center text-foreground">About Me</h2>
+        <h2 className="text-5xl font-bold text-center text-foreground">About Me</h2>
 
         <div id="introduction" className="w-full py-20">
           <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-12 items-stretch">
@@ -160,16 +160,6 @@ const bounceAnimation = {
                   ))}
                 </div>
               </div>
-
-              <div className="mt-6">
-                <h3 className="uppercase text-2xl font-bold text-primary">
-                  Services
-                </h3>
-                <p className="text-foreground">
-                  UI/UX Design, Project Management, Frontend Dev, Software Testing, Documentation
-                </p>
-              </div>
-
             </motion.div>
           </div>
         </div>

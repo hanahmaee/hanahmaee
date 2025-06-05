@@ -54,7 +54,7 @@
 
   --font-geist-mono: 'Geist Mono', monospace;
 
-  --primary: #7b4c2c; /* Mocha brown */
+  --primary: #a44b13; /* Mocha brown */
   --primary-foreground: #ffffff; /* White for strong contrast */
 
   --secondary: oklch(0.145 0 0);
@@ -92,7 +92,7 @@
   --popover-foreground: oklch(0.985 0 0);
 
 /* ✅ mocha theme */
---primary: #7b4c2c; /* mocha brown fallback */
+--primary: #a44b13; /* mocha brown fallback */
 --primary-foreground: #7b4c2c;      /* light text for contrast */
 
   /* ✅ black as secondary (keep readable foreground) */
