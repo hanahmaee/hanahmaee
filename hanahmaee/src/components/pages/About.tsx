@@ -1,11 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import VerticalNav from "../../custom/VerticalNav";
 import { FiMapPin } from "react-icons/fi";
-
 
 // Import constants from external file
 import {
@@ -16,20 +15,16 @@ import {
 } from "@/app/About/aboutConst";
 
 export default function About() {
-  const [text, setText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [loopNum, setLoopNum] = useState(0);
-  
-const bounceAnimation = {
-  animate: {
-    y: [0, -6, 0],
-    transition: {
-      duration: 1.5,
-      repeat: Infinity,
-      ease: "easeInOut",
+  const bounceAnimation = {
+    animate: {
+      y: [0, -6, 0],
+      transition: {
+        duration: 1.5,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
     },
-  },
-};
+  };
 
   useEffect(() => {
     function handleAnchorClick(event: MouseEvent) {
@@ -87,7 +82,7 @@ const bounceAnimation = {
                 </h2>
               </div>
               <p className="text-muted-foreground">
-                I’m a project manager and UX designer with a background in development.
+                I&apos;m a project manager and UX designer with a background in development.
                 I love shaping ideas into user-friendly and beautiful digital experiences.
               </p>
               <p className="text-muted-foreground">
@@ -98,7 +93,7 @@ const bounceAnimation = {
                 href="#contact"
                 className="hidden sm:inline-block mt-4 px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary transition"
               >
-                LET'S TALK →
+                LET&apos;S TALK →
               </a>
             </motion.div>
 
@@ -125,7 +120,7 @@ const bounceAnimation = {
                 href="#contact"
                 className="sm:hidden inline-block self-center px-6 py-3 bg-primary text-black font-semibold rounded-md hover:bg-primary transition"
               >
-                LET'S TALK →
+                LET&apos;S TALK →
               </a>
             </motion.div>
 
@@ -179,14 +174,14 @@ const bounceAnimation = {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-          <div className="relative w-[90vw] h-[110vw] sm:w-[350px] sm:h-[450px] md:w-[450px] md:h-[550px] lg:w-[500px] lg:h-[600px]">
-            <Image
-              src="/edu.png"
-              alt="Hanah Mae"
-              fill
-              className="object-cover rounded-xl"
-            />
-          </div>
+            <div className="relative w-[90vw] h-[110vw] sm:w-[350px] sm:h-[450px] md:w-[450px] md:h-[550px] lg:w-[500px] lg:h-[600px]">
+              <Image
+                src="/edu.png"
+                alt="Hanah Mae"
+                fill
+                className="object-cover rounded-xl"
+              />
+            </div>
           </motion.div>
 
           <div className="w-full lg:w-[55%] flex flex-col gap-6 relative before:absolute before:left-4 before:top-2 before:bottom-2 before:w-[2px] before:block lg:before:block sm:before:hidden">
@@ -290,6 +285,14 @@ const bounceAnimation = {
         })}
       </div>
     </section>
+
+        {/* Scroll down bounce animation */}
+        <motion.div
+          className="fixed bottom-12 left-1/2 transform -translate-x-1/2 z-50"
+          {...bounceAnimation.animate}
+        >
+          <span className="text-2xl text-primary">▼</span>
+        </motion.div>
       </section>
     </main>
   );
