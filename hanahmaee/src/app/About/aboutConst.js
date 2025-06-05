@@ -1,3 +1,5 @@
+// aboutConst.js
+
 import {
   FaFileSignature,
   FaLaptopCode,
@@ -7,14 +9,24 @@ import {
 import {
   SiVite,
   SiJavascript,
+  SiPython,
+  SiTailwindcss,
+  SiFirebase,
+  SiPostman,
+  SiNpm,
+  SiFramer,
+  SiVuejs,
+  SiSocketdotio,
   SiTypescript,
   SiPhp,
+  SiJest,
 } from "react-icons/si";
 
 import {
   FaReact,
   FaHtml5,
   FaCss3Alt,
+  FaNodeJs,
   FaGithub,
   FaJava,
   FaDatabase,
@@ -66,7 +78,7 @@ export const experienceData = [
       "Developed a help center for the web-based high school management system using React JS Framework, Next JS, and Tailwind CSS with a user-friendly and responsive interface.",
     ],
   },
-  {
+    {
     date: "2023",
     position: "Salesforce Admin Trainee",
     company: "Salesforce",
