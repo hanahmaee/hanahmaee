@@ -1,12 +1,12 @@
 <h1 align="center">Access Granted – Hello, I'm Hanah! 👩‍💻</h1>
 
 <p align="center">
-  📍 **Bulacan** &nbsp;|&nbsp; 💻 **Bachelor of Science in Information Technology – Major in Web and Mobile Application Development**
+  📍 <strong>Bulacan</strong> &nbsp;|&nbsp; 💻 <strong>Bachelor of Science in Information Technology – Major in Web and Mobile Application Development</strong>
 </p>
 
 <p align="center">
-  <img src="https://hanahmaee-stats.vercel.app/api?username=hanahmaee&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&hide=stars&theme=dracula&locale=en&hide_border=false" alt="Hanah's GitHub Stats" width="48%" />
-  <img src="https://hanahmaee-stats.vercel.app/api/top-langs?username=hanahmaee&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" alt="Top Languages" width="48%" />
+  <img src="https://hanahmaee-stats.vercel.app/api?username=hanahmaee&show_icons=true&include_all_commits=true&count_private=true&theme=dracula&hide_border=false&rank_icon=github&disable_animations=false" alt="Hanah's GitHub Stats" width="48%" />
+  <img src="https://hanahmaee-stats.vercel.app/api/top-langs?username=hanahmaee&layout=compact&langs_count=6&theme=dracula&hide_border=false" alt="Top Languages" width="48%" />
 </p>
 
 ---
