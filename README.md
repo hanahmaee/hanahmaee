@@ -29,9 +29,6 @@
 <h3 align="center">📞 Connect with Me</h3>
 
 <div align="center">
-  <a href="https://www.tiktok.com/@hanah.maee" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=TikTok&logo=tiktok&label=&color=000000&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="TikTok" />
-  </a>
   <a href="https://instagram.com/hanah.maee" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="Instagram" />
   </a>
