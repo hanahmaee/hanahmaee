@@ -1,5 +1,9 @@
 <h1 align="center">Access Granted – Hello, I'm Hanah! 👩‍💻</h1>
 
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=hanahmaee&label=Profile%20Views&color=blue&style=for-the-badge" alt="Profile Views" />
+</div>
+
 <p align="center">
   📍 <strong>Bulacan</strong> &nbsp;|&nbsp; 💻 <strong>Bachelor of Science in Information Technology – Major in Web and Mobile Application Development</strong>
 </p>
