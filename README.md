@@ -1,9 +1,5 @@
 <h1 align="center">Access Granted – Hello, I'm Hanah! 👩‍💻</h1>
 
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=hanahmaee&label=Profile%20Views&color=blue&style=for-the-badge" alt="Profile Views" />
-</div>
-
 <p align="center">
   📍 <strong>Bulacan</strong> &nbsp;|&nbsp; 💻 <strong>Bachelor of Science in Information Technology – Major in Web and Mobile Application Development</strong>
 </p>
@@ -11,6 +7,11 @@
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=hanahmaee&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&hide=stars&theme=dracula&locale=en&hide_border=false&cache_seconds=1800" height="150" alt="Hanah's GitHub Stats" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=hanahmaee&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&cache_seconds=1800" height="150" alt="Hanah's Top Languages" />
+</div>
+
+<br>
+<div align="center" style="margin-bottom: 20px;">
+  <img src="https://komarev.com/ghpvc/?username=hanahmaee&label=Profile%20Views&color=blue&style=for-the-badge" alt="Profile Views" />
 </div>
 
 <h3 align="center">💻 Tech Stack</h3>
@@ -46,10 +47,13 @@
 
 <br clear="both" />
 
-<h3 align="center">🌐 Web Portfolio</h3>
+<h3 align="center">🌐 Portfolio</h3>
 
 <div align="center">
   <a href="https://hanahmaeespineda.vercel.app/" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Visit&logo=vercel&label=&color=000000&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="Visit" />
+    <img src="https://img.shields.io/static/v1?message=Website&logo=vercel&label=&color=000000&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="Visit" />
+  </a>
+  <a href="https://github.com/hmespineda" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=GitHub%20v2&logo=github&label=&color=181717&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="GitHub v2" />
   </a>
 </div>
